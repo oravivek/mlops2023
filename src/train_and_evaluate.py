@@ -55,14 +55,9 @@ def train_and_evaluate(config_path) :
     print("RMSE : %s" % rmse)
     print("MAE : %s" % mae)
     print("R2 : %s" % r2)
-    
-
-
-
-
-
-
-
+   
+    os.makedirs(model_dir, exist_ok=True)
+    model_path = os.path.join(model_dir, "model.joblib")
 
 if __name__ == "__main__" :
     args = argparse.ArgumentParser()
